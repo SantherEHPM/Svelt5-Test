@@ -6,7 +6,6 @@
 
 <svelte:head>
 	<title>Home</title>
-	<link type="stylesheet" href="./page.css"/>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
@@ -27,7 +26,7 @@
 		try editing <strong>src/routes/+page.svelte</strong>
 	</h2>
 
-	<Counter />
+	<Counter start={2}/>
 </section>
 <style lang="scss">
 	$red: #ff2525;

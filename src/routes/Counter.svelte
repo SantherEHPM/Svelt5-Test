@@ -1,11 +1,26 @@
 <script lang="ts">
 	import { spring } from 'svelte/motion';
 
-	let count = 0;
+	export let start:number;
+
+	let count:number = start;
+
+	/** @param {string} name */
+	export function greet(name:string) {
+		alert(`hello ${name}!`);
+	}
 
 	const displayed_count = spring();
+	const cdis = () =>{
+		console.log(displayed_count);
+	}
+
+
+	console.log(":v")
+
 	$: displayed_count.set(count);
 	$: offset = modulo($displayed_count, 1);
+	$: console.log($displayed_count)
 
 	function modulo(n: number, m: number) {
 		// handle negative numbers
@@ -21,7 +36,7 @@
 	</button>
 
 	<div class="counter-viewport">
-		<div class="counter-digits" style="transform: translate(0, {100 * offset}%)">
+		<div id="counter_view" class="counter-digits" style="transform: translate(0, {100 * offset}%)">
 			<strong class="hidden" aria-hidden="true">{Math.floor($displayed_count + 1)}</strong>
 			<strong>{Math.floor($displayed_count)}</strong>
 		</div>
@@ -33,7 +48,6 @@
 		</svg>
 	</button>
 </div>
-
 <style>
 	.counter {
 		display: flex;
