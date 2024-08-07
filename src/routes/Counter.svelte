@@ -11,16 +11,9 @@
 	}
 
 	const displayed_count = spring();
-	const cdis = () =>{
-		console.log(displayed_count);
-	}
-
-
-	console.log(":v")
-
+	
 	$: displayed_count.set(count);
 	$: offset = modulo($displayed_count, 1);
-	$: console.log($displayed_count)
 
 	function modulo(n: number, m: number) {
 		// handle negative numbers
