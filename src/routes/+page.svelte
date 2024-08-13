@@ -2,6 +2,10 @@
 	import Counter from './Counter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import logo from '$lib/images/svelte-logo.svg';
+	import mu from '$lib/images/mu.png';
+
+	console.log(mu)
 </script>
 
 <svelte:head>
@@ -11,11 +15,11 @@
 
 <section>
 	<h1 class="redtext">
-		:v
 		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
+			<picture
+			>
+				<!-- <source srcset={mu} type="image/webp" /> -->
+				<img src={mu} alt="Welcome" fetchpriority="high" loading="eager"/>
 			</picture>
 		</span>
 
