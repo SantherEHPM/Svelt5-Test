@@ -16,6 +16,7 @@ const config = {
 			fallback: '404.html'
 		}),
 		paths: {
+			assets: process.argv.includes('dev') ? '' : process.env.VITE_BASE_URL,
 			base: process.argv.includes('dev') ? '' : process.env.VITE_BASE_URL
 		}
 	}
