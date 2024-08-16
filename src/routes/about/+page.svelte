@@ -12,7 +12,7 @@
 
 			<picture
 			>
-				<!-- <source srcset={mu} type="image/webp" /> -->
+				<source srcset={mu} type="image/webp" />
 				<img src={mu} alt="Welcome" fetchpriority="high" loading="eager"/>
 			</picture>
 	<p>
