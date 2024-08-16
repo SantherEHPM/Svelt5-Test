@@ -1,5 +1,5 @@
 <script>
- import Mu from ""
+	import mu from '$lib/images/mu.png';
 </script>
 
 <svelte:head>
