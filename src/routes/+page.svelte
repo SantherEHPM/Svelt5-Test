@@ -3,7 +3,7 @@
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
 	import logo from '$lib/images/svelte-logo.svg';
-	import mu from '$lib/images/mu.png';
+	import mu from '../lib/images/mu.png';
 
 	console.log(mu)
 </script>
@@ -19,7 +19,8 @@
 			<picture
 			>
 				<!-- <source srcset={mu} type="image/webp" /> -->
-				<img src={mu} alt="Welcome" fetchpriority="high" loading="eager"/>
+				<img src={welcome} alt="Welcome" fetchpriority="high" loading="eager"/>
+				<img src={mu} alt="mu" fetchpriority="high" loading="eager"/>
 			</picture>
 		</span>
 

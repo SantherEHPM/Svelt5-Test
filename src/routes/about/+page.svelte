@@ -1,3 +1,7 @@
+<script>
+	import mu from '../../lib/images/mu.png';
+</script>
+
 <svelte:head>
 	<title>About</title>
 	<meta name="description" content="About this app" />
@@ -5,6 +9,7 @@
 
 <div class="text-column">
 	<h1>About this app</h1>
+	<img src={mu} alt="mu" fetchpriority="high" loading="eager"/>
 
 	<p>
 		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the

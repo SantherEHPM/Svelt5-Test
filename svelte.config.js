@@ -1,4 +1,5 @@
-import adapter from '@sveltejs/adapter-static';
+import nodeAdapter from '@sveltejs/adapter-node';
+import staticAdapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { sveltePreprocess } from 'svelte-preprocess';
 
@@ -10,11 +11,9 @@ const config = {
 	preprocess: sveltePreprocess({
 		sass:{}
 	}),
-	base:'/test/',
 	kit: {
-		adapter: adapter({
-			fallback: '404.html'
-		}),
+		adapter: staticAdapter(),
+		adapter: nodeAdapter(),
 		paths: {
 			assets: process.argv.includes('dev') ? '' : process.env.VITE_BASE_URL,
 			base: process.argv.includes('dev') ? '' : process.env.VITE_BASE_URL
