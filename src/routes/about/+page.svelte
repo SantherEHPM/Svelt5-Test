@@ -1,5 +1,5 @@
 <script>
-	import mu from '../../lib/images/mu.png';
+	import mu from '$lib/images/mu.png';
 </script>
 
 <svelte:head>
@@ -11,6 +11,11 @@
 	<h1>About this app</h1>
 	<img src={mu} alt="mu" fetchpriority="high" loading="eager"/>
 
+			<picture
+			>
+				<source srcset={mu} type="image/webp" />
+				<img src={mu} alt="Welcome" fetchpriority="high" loading="eager"/>
+			</picture>
 	<p>
 		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
 		following into your command line and following the prompts:
