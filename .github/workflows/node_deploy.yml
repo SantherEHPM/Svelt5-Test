@@ -44,11 +44,17 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
+    
+    steps:
+      - name: See directories
+        run: |
+          dir 
     
     steps:
       - name: Node run build
         run: |
-          node build
+          node \build
 
       - name: Read .evn
         run: |
